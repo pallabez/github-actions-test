@@ -1,0 +1,17 @@
+name: School Deploy to UAT
+
+on:
+    workflow_dispatch:
+    push:
+      branches:
+        - main
+      paths:
+        - "apps/school/**"
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+    
+        steps:
+          - name: Echo
+            run: echo "School Deployment"

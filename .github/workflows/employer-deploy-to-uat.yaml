@@ -1,0 +1,18 @@
+name: Employer Deploy to UAT
+
+on:
+    workflow_dispatch:
+    push:
+      branches:
+        - main
+      paths:
+        - "apps/web-employer/**"
+        - "apps/web-employer-webapp/**"
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+    
+        steps:
+          - name: Echo
+            run: echo "Employer Deployment"
